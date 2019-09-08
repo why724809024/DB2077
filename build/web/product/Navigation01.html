@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="imgs/logo.png" /><!--标签头图-->
+        <link rel="stylesheet" href="CSS/navigationbar02.css" /><!--导航-->
+        <script type="text/javascript" src="javascript/navigation.js"></script><!--导航动态js-->
+
+        <link rel="stylesheet" href="CSS/productdetials.css" /><!--商品页-->
+        <script type="text/javascript" src="javascript/productdetials.js"></script>
+    </head>
+    <body>
+        <div id="Navigation">
+            <div id="NavBar">
+                <div id="title">
+                    <img id="logo_IMG" src="imgs/logo.png" width="30" height="30" alt="logo_IMG"/> 
+                    <p id="titlename">贰〇柒柒</p>
+                    <img id="version_IMG" src="imgs/PRO.png" width="19" height="8" alt="version_IMG" />
+                </div>
+                <div id="go_to_homepage" class="NavBarItem" onmouseover="NBI_trans_mouseover(this)" onmouseout="NBI_trans_mouseout(this)">
+                    <img id="home_IMG" src="imgs/home.png" width="18" height="18" alt="home_IMG" />
+                    <p>商品大厅</p>
+                </div>
+                <div id="go_to_userspace" class="NavBarItem" onmouseover="NBI_trans_mouseover(this)"  onmouseout="NBI_trans_mouseout(this)">
+                    <img id="account_IMG" src="imgs/account.png" width="18" height="18" alt="Account_IMG" />
+                    <p>商品订单</p> <!--原用户中心-->
+                </div>
+            </div>
+            <!-- ------------------------ -->
+            <div id="CartBar">
+                <div id="CartBarTop">
+                    <img class="cart" src="imgs/cart.png" width="20" height="18" alt="cart"/>
+                    <p>购物车</p>
+                    <img class="arrow" src="imgs/arrow.png" width="9" height="6" alt="arrow"/>
+                </div>
+                <div id="CartList">
+                    <p class="discription_TXT">[ Gun-EZ, ガンイージ·プロトタ ... ]</p>
+                    <div>
+                        <p class="itemnumber">x3</p>
+                        <p class="price">¥233</p>
+                    </div>
+                </div>
+                <div id="CartBarBottom" onmouseover="CBB_trans_mouseover(this)" onmouseout="CBB_trans_mouseout(this)" onclick="CBB_trans_click(this)">
+                    进购物车
+                </div>
+            </div>
+        </div>
+        <!-- --Navigation End-- -->
+
+        <div id="ProductDetials">
+            <!--上半部分-->
+            <img id="Product_IMG" src="imgs/productIMG/product1.png" width="267" height="294" onmouseover="ProductIMG_trans_onmouseover()" onmouseout="ProductIMG_trans_onmouseout()" />
+            <img id="ProductImgChange_left" src="imgs/leftarrow.png" height="40" onmouseover="ProductIMG_change_onmouseover(this)" onmouseout="ProductIMG_lchange_onmouseout(this)" onclick="left_changeImage()" />
+            <img id="ProductImgChange_right" src="imgs/rightarrow.png" height="40" onmouseover="ProductIMG_change_onmouseover(this)" onmouseout="ProductIMG_rchange_onmouseout(this)" onclick="right_changeImage()"/>
+            <p id="Product_TXT">GX-9900NT-002 ガンダムX 2号機（ジャミル・ニート搭乗機</p>
+            <div id="Assessment" class="discription">
+                <p class="productinfo">评分</p>
+                <div id="Stars">
+                    <img class="star" src="imgs/star02.png" width="20" height="20" />
+                    <img class="star" src="imgs/star02.png" width="20" height="20" />
+                    <img class="star" src="imgs/star02.png" width="20" height="20" />
+                    <img class="star" src="imgs/star02.png" width="20" height="20" />
+                    <img class="star" src="imgs/star01.png" width="20" height="20" />
+                </div>
+            </div>
+            <div id="ProductSales" class="discription">
+                <p class="productinfo">销量</p>
+                <p id="ProductSales_TXT">144 件</p>
+            </div>
+            <div id="ProductPrice" class="discription">
+                <p class="productinfo">价格</p>
+                <p id="ProductPrice_TXT">¥ 1920</p>
+            </div>
+            <div id="ProductBuyNumber" class="discription">
+                <p class="productinfo">数量</p>
+                <div>
+                    <p id="minus_buttom">-</p>
+                    <p id="ProductBuyNumber_TXT">3</p>
+                    <p id="plus_buttom">+</p>
+                </div>
+            </div>
+            <div style="position: relative;">
+                <div style="position: absolute;">
+                    <div id="ProductCartButtom" onmouseover="ProductCartButtom_onmouseover(this)" onmouseout="ProductCartButtom_onmouseout(this)" onclick="ProductCartButtom_onclick(this)">
+                        加入购物车
+                    </div>
+                </div>
+                <div id="ProductLikeButtom">
+                    <img src="imgs/like.png" width="16" height="16" />
+                    <p>收藏</p>
+                </div>
+            </div> 
+            <!--下半部分-->
+
+            <!--分割线-->
+            <div style="margin-top: 160px;
+                        position: relative;">
+                <p style="color: #666666;
+                        text-align: center;
+                        width: 180px;
+                        font-weight: 300;
+                        margin-left: 266px;
+                        background-color: #FAFAFA">产品信息
+                </p>
+                <hr style="color: #D9D9D9;
+                        opacity: 0.2;
+                        width: 726px;
+                        height: 1px;
+                        position: absolute;" />
+                
+            </div>
+            <!--分割线-->
+
+            <div id="ProductInfo">
+                <img src="imgs/Bitmap01.png" width="726" />
+                <img src="imgs/Bitmap02.png" width="726" />
+                <img src="imgs/Bitmap03.png" width="726" />
+            </div>
+
+            <!--分割线-->
+            <div style="margin-top: 120px;
+                        position: relative;">
+                <p style="color: #666666;
+                        text-align: center;
+                        width: 180px;
+                        font-weight: 300;
+                        margin-left: 266px;
+                        background-color: #FAFAFA">买家评论
+                </p>
+                <hr style="color: #D9D9D9;
+                        opacity: 0.2;
+                        width: 726px;
+                        height: 1px;
+                        position: absolute;" />
+                
+            </div>
+            <!--分割线-->
+            <div id="Comments">
+                <img id="UserHead_IMG" src="imgs/Oval.png" width="70" height="70" />
+                <div id="StarsByUser">
+                    <img class="star" src="imgs/star02.png" width="16" height="16" />
+                    <img class="star" src="imgs/star02.png" width="16" height="16" />
+                    <img class="star" src="imgs/star02.png" width="16" height="16" />
+                    <img class="star" src="imgs/star02.png" width="16" height="16" />
+                    <img class="star" src="imgs/star01.png" width="16" height="16" />
+                </div>
+                <p id="UserName_CommentPart_TXT">Dimpurr Cheny</p>
+                <p id="UserComment_TXT">对义体人生活的方方面面的呈现也因游戏的第一人称玩法表现出极强的感染力。在玩家接受更换义眼的手术时，玩家可以看到医生的手术钳子伸向自己的眼球，之后整个视觉系统完全下线，几秒钟之后，玩家接入摆在自己身边的新义眼，以一种十分神奇而荒谬的视角注视着自己，然后义眼被医生拿起，玩家能感受到自己的视线支点抬升、旋转，凑近自己的脸，然后嵌入到自己身体的参考系中，之后视野有一瞬间模糊，义眼同步完成，演出效果令人印象深刻。</p>
+            </div>
+        </div>
+    </body>
+</html>
