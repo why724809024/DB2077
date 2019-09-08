@@ -1,0 +1,228 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    version 0.4 2077ver0.4
+    Created on : 2019-9-2, 14:45:30
+    Author     : Lolimoe
+*/
+/*start!!!!!!!!!*/
+
+body {
+    margin: 0px;
+}
+
+p {
+    font-size: 10px;
+}
+
+#Navigation {
+    width: 228px;
+    height: -webkit-fill-available;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+#NavBar {
+    background-color: #131924;
+    padding-top: 10px;
+    height: 60vh;
+}
+
+#NavBar p {
+    color: #FFFFFF;
+    margin: 0px;
+    text-align: center;
+}
+
+#NavBar #title {
+    position: relative;
+    margin-left: 33px;
+    width: 134px;
+    height: 40px;
+}
+
+#NavBar img {
+    position: absolute;
+}
+
+#NavBar #titlename {
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+#NavBar #version_IMG {
+    left: 101px;
+    bottom: 16px;
+}
+
+#NavBar #go_to_homepage , #go_to_userspace {
+    height: 40px;
+    /* background-color: #1B6EA6;  */
+    position: relative;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -o-transition:all 0.5s;
+}
+
+
+#NavBar #go_to_homepage img , #go_to_userspace img {
+    left: 40px;
+    top: 10px;
+}
+
+#NavBar #go_to_homepage p , #go_to_userspace p {
+    font-weight: 300;
+    padding-top: 11px;
+    padding-right: 16px;
+}
+
+
+/* ------------------------------------ */
+
+#CartBar {
+    height: -webkit-fill-available;
+    background-color: #232D3E;
+}
+
+#CartBar p {
+    color: #FFFFFF;
+    margin: 0px;
+    text-align: center;
+}
+
+#CartBarTop {
+    width: 202px;
+    height: 33px;
+    margin: 0px;
+    position: relative;
+    margin-left: 13px;
+}
+
+#CartBarTop img {
+    position: absolute;
+}
+
+#CartBarTop p {
+    font-weight: 300;
+}
+
+#CartBar p {
+    margin-top: 0px;
+    padding: 8px;
+}
+
+#CartBar .cart {
+    left: 5px;
+    top: 7px;
+}
+
+#CartBar .arrow {
+    right: 5px;
+    top: 15px;
+}
+
+#CartBarList {
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+    height: 63px;
+}
+
+#CartBarList .discription_TXT {
+    margin: 0px;
+    padding: 1px;
+}
+
+#CartBarList div {
+    position: relative;
+}
+
+#CartBarList div p {
+    font-weight: 300;
+    font-size: 8px
+}
+
+#CartBarList .itemnumber {
+    position: absolute;
+    padding: 5px;
+    left: 14px;
+}
+
+#CartBarList .price {
+    right: 14px;
+    margin: 0px;
+    padding: 5px;
+    position: absolute;
+}
+
+#CartBarBottom {
+    width: 144px;
+    margin: 0px;
+    position: absolute;
+    bottom: 30px;
+    margin-left: 44px;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+    padding: 16px 0px;
+    background-color: #1B6EA6;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+/*
+#CartBarBottom input {
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-top: 20px;
+    padding: 10px;
+    align-items: center;
+    width: 135px;
+    height: 28px;
+}
+*/
+
+/* add */
+
+#NavBar #go_to_homepage form, #go_to_userspace form {
+    width: 100%;
+    height: 100%;
+}
+
+#NavBar #go_to_homepage form input[type='submit'], #go_to_userspace form input[type='submit'] {
+    width: 100%;
+    height: 100%;
+    padding-left: 0;
+    background: none;
+    color: #fff;
+}
+
+/* #CartBar form {
+    position: relative;
+}
+
+#CartBar form input[type='submit'] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline;
+} */
+
+#hpuser .edbt_concel {
+    position: relative;
+    top: -34px;
+    left: 40px;
+}
+
+#hpuser .welcome ~ .edbt_save {
+    width: 100%;
+    margin-top: 10px;
+}

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+version 0.1 2077ver0.4
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>2077/商品详情</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/x-icon" href="../resources/imgs/logo.png" />
+        <link rel="stylesheet" href="../resources/css/navigationbar02.css" />
+        <script type="text/javascript" src="../resources/javascript/navigation.js"></script>
+
+        <link rel="stylesheet" href="../resources/css/cartlist_1.css" />
+        <script type="text/javascript" src="../resources/javascript/ShutUpAndTakeMyMoney.js"></script>
+    </h:head>
+    <h:body>
+        <div id="Navigation">
+            <div id="NavBar">
+                <div id="title">
+                    <img id="logo_IMG" src="../resources/imgs/logo.png" width="30" height="30" alt="logo_IMG"/> 
+                    <p id="titlename">贰〇柒柒</p>
+                    <img id="version_IMG" src="../resources/imgs/PRO.png" width="19" height="8" alt="version_IMG" />
+                </div>
+                <div id="go_to_homepage" class="NavBarItem" onmouseover="NBI_trans_mouseover(this)" onmouseout="NBI_trans_mouseout(this)">
+                    <img id="home_IMG" src="../resources/imgs/home.png" width="18" height="18" alt="home_IMG" />
+                    <p>商品大厅</p>
+                </div>
+                <div id="go_to_userspace" class="NavBarItem" onmouseover="NBI_trans_mouseover(this)"  onmouseout="NBI_trans_mouseout(this)">
+                    <img id="account_IMG" src="../resources/imgs/account.png" width="18" height="18" alt="Account_IMG" />
+                    <p>商品订单</p> 
+                </div>
+            </div>
+            <div id="CartBar">
+                <div id="CartBarTop">
+                    <img class="cart" src="../resources/imgs/cart.png" width="20" height="18" alt="cart"/>
+                    <p>购物车</p>
+                    <img class="arrow" src="../resources/imgs/arrow.png" width="9" height="6" alt="arrow"/>
+                </div>
+                <div id="CartBarList">
+                    <p class="discription_TXT">[ Gun-EZ, ガンイージ·プロトタ ... ]</p>
+                    <div>
+                        <p class="itemnumber">x3</p>
+                        <p class="price">¥233</p>
+                    </div>
+                </div>
+                <a id="CartBarBottom" onmouseover="CBB_trans_mouseover(this)" onmouseout="CBB_trans_mouseout(this)" onclick="CBB_trans_click(this)" href="../cart/List.xhtml">
+                    进购物车
+                </a>
+            </div>
+        </div>
+
+        <div id="CartListTop">
+            <img src="../resources/imgs/cart02.png" width="30" style="position: absolute;" />
+            <p id="gouwuche"><h:outputText value="#{cartController.test}"/></p>
+            <div id="CartListHead">
+                <p style="right: 226px;">单价</p>
+                <p style="right: 116px;">数量</p>
+                <p style="right: 12px;">总价</p>
+            </div>
+        </div>
+        <div id="CartList">
+
+            <h:form id="ProductClip" >
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListCartEmpty}" rendered="#{cartController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{cartController.items.rowCount > 0}">
+                    <h:dataTable 
+                        headerClass="hidden"
+                        value="#{cartController.items}" 
+                        var="item" border="0" 
+                        cellpadding="2" 
+                        cellspacing="0" 
+                        class="ProductClip"
+                        >
+
+                        <h:column>
+                            <div id="ProductClip_IMG">
+                                <h:commandButton image="../#{item.product.img}" class="imgbutton" actionListener="#{productController.listener(item.product.proId)}" action="#{cartController.goToView}" />
+                                
+                                <!--<h:graphicImage value="../resources/imgs/#{item.product.img}" height="117"/>-->
+                            </div>
+                        </h:column>
+                        <h:column>
+                            <div id="ProductClipName_TXT">
+                                <h:outputText 
+                                    value="#{item.product.name}" />
+                            </div>
+                            <div id="ProductClip_Stars">
+                                <img class="star" src="../resources/imgs/star02.png" width="14" />
+                                <img class="star" src="../resources/imgs/star02.png" width="14" />
+                                <img class="star" src="../resources/imgs/star02.png" width="14" />
+                                <img class="star" src="../resources/imgs/star02.png" width="14" />
+                                <img class="star" src="../resources/imgs/star01.png" width="14" />
+                            </div>
+                            <div id="deletebuttom">
+                                <img src="../resources/imgs/delete.png" width="16" />
+                                <h:commandButton action="#{cartController.destroy}" value="删除" class="input"/>
+
+                            </div>
+                            <div id="likebuttom">
+                                <img src="../resources/imgs/like.png" width="16" />
+                                <p>移入收藏夹</p>
+                            </div>
+                        </h:column>
+
+                        <h:column>
+                            <h:outputText value="¥#{item.product.price}" style="right: 200px;" class="CartListText"/>
+                        </h:column>
+                        <h:column>
+                            <h:outputText value="#{item.number}" style="right: 100px;" class="CartListText"/>
+                        </h:column>
+                        <h:column>
+                            <h:outputText value="#{item.oneSumPrice}" style="right: -16px;" class="CartListText pdcountsum"/>
+                        </h:column>
+                        <h:column>
+                            <h:outputText value="#{item.oneSumPrice}" class="CartListTextPadding"/>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+
+                        </h:column>
+
+                    </h:dataTable>
+                </h:panelGroup>
+
+            </h:form>
+
+
+
+        </div>
+        <div id="ShutUpAndTakeMyMoney">
+            <p style="right: 300px;
+               width: 40px;
+               color: #777777;
+               bottom: 16px;">合计</p>
+            <h:form>
+                <span>¥</span>
+                <h:inputText class="CartTotalCost" value="¥#{cartController.allSumPrice}" readonly="true"/>
+                <h:commandButton class="PayButtom" 
+                                 onmouseover="PayButtom_onmouseover(this)" 
+                                 onmouseout="PayButtom_onmouseout(this)" 
+                                 onclick="PayButtom_onclick(this)" 
+                                 value="立即支付"
+                                 action="#{cartController.goToComment}"
+                                 />
+            </h:form>
+        </div>
+        <script type="text/javascript" src="../resources/javascript/ShutUpAndTakeHowMantMoney.js"></script>
+
+    </h:body>
+
+</html>
