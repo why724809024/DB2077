@@ -175,6 +175,16 @@ body {
 
 /* add */
 
+.tb_orderprice {
+	margin: 20px 0;
+    padding-left: 290px;
+    top: 20px;
+    font-size: 14px;
+    text-align: left;
+}
+
+/* add */
+
 .pdbtn a {
 	text-decoration: none;
 	color: #555;
@@ -195,14 +205,4 @@ body {
     padding: 16px 0px;
     background-color: #1B6EA6;
     border-radius: 40px;
-}
-
-/* add */
-
-.tb_orderprice {
-	margin: 20px 0;
-    padding-left: 290px;
-    top: 20px;
-    font-size: 14px;
-    text-align: left;
 }
