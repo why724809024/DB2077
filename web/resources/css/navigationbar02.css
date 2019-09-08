@@ -74,13 +74,27 @@ p {
 #NavBar #go_to_homepage img , #go_to_userspace img {
     left: 40px;
     top: 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-#NavBar #go_to_homepage p , #go_to_userspace p {
-    font-weight: 300;
+#NavBar #go_to_homepage a , #go_to_userspace a {
+    margin-left: 69px;
+    margin: 0px;
     padding-top: 11px;
     padding-right: 16px;
+    width: 130px;
+    /* margin-bottom: 0px; */
+    font-size: 14px;
+    font-weight: 300;
+    /* font-weight: 300; */
+    color: #FFFFFF;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
 }
+
 
 
 /* ------------------------------------ */
@@ -178,18 +192,6 @@ p {
     text-decoration: none;
 }
 
-/*
-#CartBarBottom input {
-    border-radius: 10px;
-    margin-left: 4px;
-    margin-top: 20px;
-    padding: 10px;
-    align-items: center;
-    width: 135px;
-    height: 28px;
-}
-*/
-
 /* add */
 
 #NavBar #go_to_homepage form, #go_to_userspace form {
@@ -225,4 +227,96 @@ p {
 #hpuser .welcome ~ .edbt_save {
     width: 100%;
     margin-top: 10px;
+}
+
+/*
+#CartBarBottom input {
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-top: 20px;
+    padding: 10px;
+    align-items: center;
+    width: 135px;
+    height: 28px;
+}
+*/
+
+
+.minicart {
+    color: #ccc;
+    font-size: 12px;
+    padding: 8px 0;
+}
+
+.mcName {
+    display: block;
+    color: #fafafa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mcNum::before {
+    content: "x"
+}
+
+.mcNum {
+    font-size: 10px;
+}
+
+.mcPrice {
+    font-size: 10px;
+    float: right;
+}
+
+#minicardForm {
+    padding-right: 5px;
+}
+
+#minicardForm tr {
+    display: block;
+    margin: 0 15px 0 20px;
+    /* width: 127%; */
+    width: 183px;
+    border-bottom: 1px solid #ffffff33;
+}
+
+#minicardForm tr:last-of-type {
+    border: none;
+}
+
+#minicardForm tr td {
+    display: block;
+}
+
+#minicardForm table {
+    max-height: 90px;
+    overflow-y: scroll;
+    display: block;    
+    padding-right: 5px;
+}
+
+#minicardForm table::-webkit-scrollbar {
+	width: 5px;
+	background: transparent;
+}
+
+#minicardForm table::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #fff;
+}
+
+.cartEmptyT {
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+}
+
+#CartList .cartEmptyT {
+    color: #777;
+}
+
+#CartBar .cartEmptyT {
+    color: #ddd;
+    font-size: 12px;
 }
